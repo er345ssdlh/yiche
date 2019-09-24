@@ -1,0 +1,11 @@
+<!--pages/wecatApi/wecatApi.wxml-->
+<view class="far" style="width: {{cameraWidth}}px; height: {{cameraHeight+2000}}px;">
+<!-- 背景图 -->
+    <image style="width: {{cameraWidth}}px; height: {{cameraHeight+2000}}px;" src="../../images/bgBig.png"></image>
+    <!-- 小汽车 -->
+    <view class="car" id="car" style="position: absolute;bottom:{{bottomX||150/x}}px;left:{{328/x}}px;}" animation="{{animationMiddle}}">
+      <image animation="{{animationMiddleHeaderItem}}"style="width: 90rpx; height: 200rpx;" src="../../images/selfCar.png"></image>
+    </view>
+    <!-- 点击按钮 -->
+    <button class="btn" bindtap="jumps" type="primary">行</button>
+</view>

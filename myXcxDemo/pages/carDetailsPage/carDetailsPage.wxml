@@ -1,0 +1,20 @@
+<!--pages/carDetailsPage/carDetailsPage.wxml-->
+<view class="img">
+  <image src="{{carDetail.coverImg}}"></image>
+  <view class="textCar">
+    <view class="clearfix">
+      <text>参考价: {{carDetail.dealPriceRange}}</text>
+      <text>级别: {{carDetail.carType}}</text>
+    </view>
+    <view class="clearfix">
+      <text>真实: {{carDetail.referencePriceRange}}</text>
+      <text>耗油: {{carDetail.oil}}</text>
+    </view>
+    <view class="clearfix">
+      <view class="big">经销商最高降幅:
+        <text class="green"> ↓{{carDetail.maxFavorablePrice}}</text>
+      </view>
+      <text class="goLookLook">去看看</text>
+    </view>
+  </view>
+</view>

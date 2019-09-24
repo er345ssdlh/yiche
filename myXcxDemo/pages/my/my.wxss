@@ -1,0 +1,68 @@
+/* pages/my/my.wxss */
+.user{
+  position: relative;
+  margin: 30rpx;
+  padding: 50rpx;
+  box-shadow: 1rpx 1rpx 20rpx rgba(1, 1, 1, 0.3);
+  border-radius: 40rpx;
+  overflow: hidden;
+}
+.wecat{
+  margin-top: 20rpx;
+  float: right;
+  background-color: #ee5946;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+}
+.userName{
+  height: 90rpx;
+  line-height: 90rpx;
+  float: left;
+  vertical-align: middle;
+}
+.name{
+  height: 90rpx;
+  margin-left: 20rpx;
+  color: #aaaaaa;
+  float: right;
+}
+.v1{
+  margin-top:5rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.v2{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 20rpx;
+}
+.user image{
+  width: 90rpx;
+  height: 90rpx;
+  float: left;
+  border-radius: 50%;
+}
+.content{
+  margin-top: 30rpx;
+  padding: 30rpx;
+  width: 640rpx;
+  margin-left: 25rpx;
+  border-radius: 20rpx;
+  box-shadow: 1rpx 1rpx 10rpx rgba(1, 1, 1, 0.3);
+  background-color: #ccbfab;
+  color: #ffffff;
+}
+.aa{
+  height: 100rpx;
+}
+.weather{
+  float: left;
+}
+.temp{
+  text-align: center;
+  font-size: 70rpx;
+}
+.city{
+  float: right;
+}

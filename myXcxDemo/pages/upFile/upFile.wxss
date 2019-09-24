@@ -1,0 +1,10 @@
+/* pages/upFile/upFile.wxss */
+.btn{
+  width: 550rpx;
+  margin-left: 100rpx;
+}
+input{
+  width: 400rpx;
+  height: 50rpx;
+  background-color: #ccc;
+}

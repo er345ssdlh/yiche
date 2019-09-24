@@ -1,0 +1,147 @@
+<!--index.wxml-->
+<view class="swip">
+  <!-- 
+indicator-dots='true':是否显示面板指示点,默认为false
+indicator-color='red':指示点颜色
+indicator-active-color='yellow':当前选中的指示点颜色
+autoplay='true':是否自动切换
+ -->
+  <swiper class="swiper-box" indicator-dots='true' indicator-color='white' indicator-active-color='white' autoplay='true'>
+    <swiper-item>
+      <image src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=459806430,2320838741&fm=26&gp=0.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=459806430,2320838741&fm=26&gp=0.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=459806430,2320838741&fm=26&gp=0.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=459806430,2320838741&fm=26&gp=0.jpg'></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="head">  
+  <view class='top-nav'>    
+    <view id="0" bindtap='changeStatus' class='top-btn {{ status ==0?"top-hoverd-btn":""}}'>      
+      <text>推荐</text>    
+    </view>    
+    <view id="1" bindtap='changeStatus' class='top-btn {{status ==1?"top-hoverd-btn":""}}'>      
+      <text>视频</text>    
+    </view>    
+    <view id="2" bindtap='changeStatus' class='top-btn {{status ==2?"top-hoverd-btn":""}}'>      
+      <text>小视频</text>    
+    </view>    
+    <view id="3" bindtap='changeStatus' class='top-btn {{status ==3?"top-hoverd-btn":""}}'>      
+      <text>降价</text>    
+    </view>    
+    <view id="4" bindtap='changeStatus' class='top-btn {{status ==4?"top-hoverd-btn":""}}'> 
+      <text>新车</text>    
+    </view>  
+  </view>
+</view>
+<!-- 推荐 -->
+
+  <block wx:if="{{status==0}}">
+    <scroll-view scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'>
+        <block wx:for="{{itemList}}" wx:key="{{item.newsId}}">
+          <!-- 如果是图片就显示图片 -->
+          <block wx:if="{{item.type===1}}">
+              <view class="tj" bindtap="pageDetail" data-item="{{item}}">
+                <view class="teatH">
+                  <text>{{item.title}}</text>
+                  <text>{{item.showName}}</text>
+                  <text></text>
+                  <text style='float:right;color:#777'>{{item.publishTime}}</text>
+                </view>
+                <view class="img">
+                  <image src="{{item.cover[0]}}"></image>
+                <!-- 如果没有图片就用视频初始图片 -->
+                  <!-- <image wx:if="{{!item.cover}}" src="{{item.imageUrl}}"></image> -->
+                  <!-- 如果有就用后端图片 -->
+                  <!-- <image wx:if="{{item.cover!==[]}}" src="{{item.cover[0]}}"></image> -->
+                </view>
+            </view>
+          </block>
+          <!-- 如果是视频就显示视频 -->
+          <block wx:if="{{item.type===2}}">
+             <view class="tj3" bindtap="pageDetail" data-item="{{item}}">
+                  <view class="h2">{{item.title}}</view>
+                  <video src="{{item.url}}" poster="{{imageUrl}}" controls="false"></video>
+                  <view class="sp2">
+                    <text>{{item.showName}}</text>
+                  <text></text>
+                  <text style='float:right;margin-right:20rpx;'>{{item.publishTime}}</text>
+                  </view>
+            </view>
+          </block>
+        </block>
+    </scroll-view>
+  </block>
+
+<!-- 视频 -->
+<block wx:if="{{status==1}}">
+<view class="tj2">
+  <view>
+    <view class="teatH">
+      <text>上汽通用的四驱系统是什么水平？试驾体验雪佛兰创界RS</text>
+      <text>徐子说车</text>
+      <text> 0999评论</text>
+    </view>
+    <view class="img">
+        <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1011877114,2222370112&fm=26&gp=0.jpg"></image>
+    </view>
+  </view>
+  <view>
+    <view class="teatH">
+      <text>上汽通用的四驱系统是什么水平？试驾体验雪佛兰创界RS</text>
+      <text>徐子说车</text>
+      <text> 0999评论</text>
+    </view>
+    <view class="img">
+        <image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1011877114,2222370112&fm=26&gp=0.jpg"></image>
+    </view>
+  </view>
+</view>
+</block>
+
+<!-- 小视频 -->
+<block wx:if="{{status==2}}">
+<view class="tj2">
+  <view class="teatH">
+  <text>赛麟的迈迈，赛车级操控？防水补漏漂移战（1）</text>
+  <text>徐子说车</text>
+  <text> 0999评论</text>
+  </view>
+  <view class="img">
+    <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1096187438,3904447543&fm=26&gp=0.jpg"></image>
+  </view>
+</view>
+</block>
+<!-- 降价 -->
+<block wx:if="{{status==3}}">
+<view class="tj2">
+  <view class="teatH">
+  <text>当初不做媒体的话 我想当一名工程师 </text>
+  <text>徐子说车</text>
+  <text> 0999评论</text>
+  </view>
+  <view class="img">
+    <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1404780035,2077577258&fm=26&gp=0.jpg"></image>
+  </view>
+</view>
+</block>
+
+<!-- 新车 -->
+<block wx:if="{{status==4}}">
+<view class="tj2">
+  <view class="teatH">
+  <text>越级体验 吉利缤越小钢炮</text>
+  <text>徐子说车</text>
+  <text> 0999评论</text>
+  </view>
+  <view class="img">
+    <image src="https://f10.baidu.com/it/u=2945519639,4273333198&fm=72"></image>
+  </view>
+</view>
+</block>

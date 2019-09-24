@@ -1,0 +1,11 @@
+<!--pages/upFile/upFile.wxml-->
+<button class="btn" type="primary" bindtap="upload">上传行驶证自动填写信息</button>
+<canvas canvas-id="canvasPic"></canvas>
+<image wx:if='{{img}}' src="{{img}}"></image>
+<view>品牌车型<input></input></view>
+<view>车牌号码<input></input></view>
+<view>发动机号<input></input></view>
+<view>车架号码<input></input></view>
+<button class="btn" type="primary" bindtap="yesBtn">确定</button>
+<view><text>易车网将严格保密您的车辆信息，请放心填写
+点击确定即视为同意《隐私政策》</text></view>

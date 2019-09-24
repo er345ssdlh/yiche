@@ -1,0 +1,4 @@
+<!--pages/number/number.wxml-->
+new Number: {{newNumber}}
+<view>{{number}}</view>
+<button bindtap="start">start</button>

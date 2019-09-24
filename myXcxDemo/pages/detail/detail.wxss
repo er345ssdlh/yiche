@@ -1,0 +1,98 @@
+/* pages/detail/detail.wxss */
+video{
+  position: sticky;
+  top: 0;
+  z-index: 999
+}
+.ccc{
+  height: 400rpx;
+  background-color: #eee;
+  margin-top: -4rpx;
+}
+.textH{
+  padding: 40rpx 30rpx 40rpx 30rpx;
+  font-size: 40rpx;
+  color: #000;
+}
+.textSpan{
+  margin: 30rpx;
+  font-size: 27rpx;
+  color: #777777;
+}
+.textSpan text{
+  margin-right: 20rpx;
+}
+.textSpan text:nth-child(4){
+  float: right;
+}
+scroll-view{
+  background-color: #ffffff;
+  border-radius: 20rpx 20rpx 0 0;
+  margin-top: -20rpx;
+  overflow: hidden;
+}
+.speak{
+  background-color: #ffffff;
+  padding: 30rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.all{
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.spaBar{
+  border-bottom: 1px solid #ccc;
+  padding: 30rpx 0 30rpx 0;
+}
+.img{
+  float: left;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.img image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.user view:nth-child(1){
+  color: #111;
+  font-size: 40rpx;
+}
+.user view:nth-child(2){
+  color: #888;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+.spa{
+  margin-left: 120rpx;
+  margin-top: 30rpx;
+}
+.inp{
+  height: 70rpx;
+  padding: 20rpx;
+}
+.inp input{
+  float: left;
+  width: 400rpx;
+  height: 70rpx;
+  padding-left: 20rpx;
+  background-color:#eee;
+  border-radius: 20rpx;
+}
+.inp image{
+  float: left;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 20rpx;
+  margin-left: 30rpx;
+}
+.tt{
+  display: block;
+  height: 200rpx;
+  line-height: 200rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #888;
+}

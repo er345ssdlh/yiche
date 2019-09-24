@@ -1,0 +1,23 @@
+/* pages/news/news.wxss */
+.tit{
+  width: 690rpx;
+  font-size: 40rpx;
+  margin: 30rpx;
+}
+.tit text:nth-child(1){
+  display: block;
+  height: 100rpx;
+  margin: 30rpx;
+}
+.tit image{
+  width: 100%;
+}
+.usercon text:nth-child(1){
+  float: left;
+  height: 100rpx;
+  margin: 0 !important;
+}
+.usercon text:nth-child(2){
+  float: right;
+  height: 100rpx;
+}

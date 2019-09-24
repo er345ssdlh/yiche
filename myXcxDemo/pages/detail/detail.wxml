@@ -1,0 +1,43 @@
+<!--pages/detail/detail.wxml-->
+<video style="height:350rpx;width:750rpx;" autoplay="true" src="{{vid}}" controls="true" poster="{{imageUrl}}"> </video>
+<view class="ccc">
+  <view class="textH">
+    <text>{{tit}}</text>
+  </view>
+  <view class="textSpan">
+    <text>{{user}}</text>
+    <text>播放</text>
+    <text>时长</text>
+    <text>{{time}}</text>
+  </view>
+</view>
+<scroll-view scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'>
+  <view class="speak">
+    <text class="all">全部评论</text>
+    <!-- 评论列表 -->
+    <block wx:if="{{speakText!==[]}}">
+      <view class="spaBar" wx:for="{{speakText}}" wx:key="item.id">
+          <view>
+            <view class="img">
+            <image src="{{item.avatarPath}}"></image>
+            </view>
+            <view class="user">
+            <view>{{item.showName}}</view>
+            <view>{{item.showTime}}</view>
+            </view>
+          </view>
+          <view class="spa">
+            <text>{{item.content}}</text>
+          </view>
+      </view>
+    </block>
+    <block wx:if="{{speakText.length==0}}">
+      <text class="tt">还没有评论，赶快开发表一个叭</text>
+    </block>
+    <view class="inp">
+    <input placeholder="我得来说说..." bindinput='expInput'/>
+    <image src="http://img0.imgtn.bdimg.com/it/u=1836040124,2281674808&fm=26&gp=0.jpg"></image>
+    <image src="https://f10.baidu.com/it/u=582778674,2719803519&fm=72"></image>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,4 @@
+/* pages/day/day.wxss */
+.s{
+  background-color: #eee;
+}

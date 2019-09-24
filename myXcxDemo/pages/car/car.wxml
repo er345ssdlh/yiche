@@ -1,0 +1,94 @@
+<!--pages/car/car.wxml-->
+<!-- 如果有弹层就禁止下边的滚动 -->
+<view class="car {{hiSh?'indexFixed':''}}" id="car">
+<!-- 各个字母 -->
+<!-- scroll-into-view="{{ids}}" scroll-with-animation style="height:{{height}}px"锚点跳转动画的关键 -->
+  <scroll-view bindscroll="ld" scroll-y scroll-into-view="{{ids}}" scroll-with-animation style="height:{{height}}px">
+    <view class="A" wx:for="{{carList}}" id="{{key}}" wx:key="key" wx:for-index="key"  wx:for-item="value">
+      <text class="tit">{{key}}</text>
+        <block wx:for="{{value}}" wx:key="*this">
+          <view class="oneCar" data-value="{{item}}" bindtap="handleshow">
+            <image src="http://image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/100/m_{{item.masterId}}_100.png"></image>
+            <text>{{item.masterName}}</text>
+          </view>
+        </block>
+    </view>
+  </scroll-view>
+</view>
+  <!-- 弹出层 -->
+<view class="hishs"  wx:if="{{hiSh}}">
+  <view class="hish" animation="{{slide_up1}}" animation="{{animationData}}">
+    <!-- tab栏 -->
+    <view class='top-nav'>
+      <view id="0" bindtap='changeStatus' class='top-btn {{ status ==0?"top-hoverd-btn":""}}'>      
+        <text>在售</text>    
+      </view>    
+      <view id="1" bindtap='changeStatus' class='top-btn {{status ==1?"top-hoverd-btn":""}}'>      
+        <text>停售</text>    
+      </view>
+    </view>
+    <!-- 在售相应内容1111111111111111111111111111111111111111111111111 -->
+    <view class="carCon" wx:if="{{status==0}}">
+      <!-- 汽车名字 -->
+      <scroll-view class="scroll-view" scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'>
+        <block wx:for="{{carDetailedList}}" wx:key="*this">
+          <view class="carName">
+            {{item.brandName}}
+          </view>
+          <!-- 汽车的分类 111111111111-->
+          <!-- 如果不是停售 -->
+          <!-- for的item和if的就不是一个item了 -->
+            <block wx:for="{{item.serialList}}" wx:key="*this" wx:if="{{item.saleStatus==1}}">
+              <view class="carlists clearfix" data-serialId="{{item.serialId}}" catchtap="handleCarDetailsPage">
+                <image data-img="{{item.picture}}"  src="http://image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/100/m_{{masterId}}_100.png"></image>
+                <view>
+                  <view>{{item.serialName}}</view>
+                  <text>指导价: </text> 
+                  <text class="tex1">{{item.dealerPrice}}</text> 
+                  <text class="tex2"> ↓{{item.maxFavorablePrice}}</text>
+                </view>
+              </view>
+            </block>
+          <view class="head"></view>
+        </block>
+      </scroll-view>
+    </view>
+    <!-- 停售相应内容 11111111111111111111111111111111111111111111111111111-->
+    <view class="carCon" wx:if="{{status==1}}">
+       <!-- 汽车名字 -->
+      <scroll-view class="scroll-view" scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'>
+        <block wx:for="{{carDetailedList}}" wx:key="*this">
+          <view class="carName">
+            {{item.brandName}}
+          </view>
+          <!-- 汽车的分类 111111111111-->
+          <!-- 如果不是停售 -->
+          <block wx:for="{{item.serialList}}" wx:key="*this" wx:if="{{item.saleStatus==-1}}">
+            <view class="carlists clearfix"  data-serialId="{{item.serialId}}"  catchtap="handleCarDetailsPage">
+              <image src="http://image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/100/m_{{masterId}}_100.png"></image>
+              <view>
+                <view>{{item.serialName}}</view>
+                <text>指导价: </text> 
+                <text class="tex1">{{item.dealerPrice}}</text> 
+                <text class="tex2"> ↓{{item.maxFavorablePrice}}</text>
+              </view>
+            </view>
+          </block>
+          <view class="head"></view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 关闭按钮 -->
+  <view class="test" catchtap="handleHidd" animation="{{animationtest}}">
+  关闭
+  </view>
+</view>
+<!-- 右侧导航 -->
+<view class="rights"  catchtouchstart="handlerAlphaTap" catchtouchmove="handlerMove" >
+      <block wx:for="{{newcarList}}" wx:key="{{key}}" wx:for-index="key" wx:for-item="value">
+        <view class="reds {{ids==key||idss==key?'red':''}}" data-id="{{key}}"  wx:if="{{value!==0}}" >
+          {{key}}
+        </view>
+      </block>
+</view>

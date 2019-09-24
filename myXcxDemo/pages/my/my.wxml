@@ -1,0 +1,56 @@
+<!--pages/my/my.wxml-->
+<!-- 未登录状态 -->
+<block wx:if="{{!userLogin}}">
+  <view class="user clearfix">
+    <view class="userName clearfix">
+      <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2666045109,1094093260&fm=26&gp=0.jpg"></image>
+      <text>未登录</text>
+    </view>
+     <form bindsubmit='getFormId' report-submit>
+     <!--第一步  点击 授权按钮 -->
+        <button class="wecat"  form-type='submit'  data-status="402" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">微信登录</button>
+      </form> 
+    <!-- <view class="wecat" bindtap="handleLogin">
+      微信登陆
+    </view> -->
+  </view>
+</block>
+<!-- 登录状态 -->
+<block wx:if="{{userLogin}}">
+<view class="user clearfix">
+    <view class="userName clearfix">
+      <image src="{{avatarUrl}}"></image>
+      <view class="name">
+        <view class="v1">{{nickName}}</view>
+        <view class="v2">绑定手机</view>
+      </view>
+    </view>
+  </view>
+</block>
+<view class='content'>
+  <view class='today'>
+    <view class='info'>
+      <view class='temp'>{{wz[0].name}}</view>
+    </view>
+  </view>
+</view>
+<view class='content'>
+  <view class='today'>
+    <view class='info'>
+      <view class='temp'>{{weather.temperature.data}}℃</view>
+      <view class="aa">
+        <view class='weather'>{{weather.weather.data}} {{weather.winddirection.data}} {{weather.windpower.data}}</view>
+      <view class='city'>{{weather.city.data}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<button type="primary" style="margin-top:30rpx" bindtap="aaalog">弹出层分享demo</button>
+<button type="primary" style="margin-top:30rpx" bindtap="aaad">汽车人生2.0优化版</button>
+<button type="primary" style="margin-top:30rpx" bindtap="aaac">汽车人生1.0</button>
+<button type="primary" style="margin-top:30rpx" open-type="share">分享</button>
+<button type="primary" style="margin-top:30rpx" open-type="contact">会话</button>
+<button type="primary" style="margin-top:30rpx" bindtap="aaa">去canvas</button>
+<button type="primary" style="margin-top:30rpx" bindtap="aaab">去video</button>
+<button type="primary" style="margin-top:30rpx" bindtap="aaabs">数字变化</button>
+

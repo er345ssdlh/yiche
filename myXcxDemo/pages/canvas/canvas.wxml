@@ -1,0 +1,5 @@
+<!--pages/canvas/canvas.wxml-->
+<canvas hidden='{{canvasHide}}' style="width:{{width}}px; height:{{height/2}}px; background-color:#ddd" canvas-id="qrCanvas"></canvas> 
+<text>{{text}}</text>
+<button data-text="{{text}}" bindtap="copy">复制</button>
+<input type="text" style="width:300px;height:30px;background:pink;"/>

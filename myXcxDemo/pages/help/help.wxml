@@ -1,0 +1,89 @@
+<view class='myHeader'>您有{{numberFirend}}位好友的里程还未收取，您能帮他收取，获取奖励</view>
+<view class="myBody">
+  <view class="hOne"><text>可帮助的好友</text></view>
+  <view class="li clearfix">
+    <view class="userLeft clearfix">
+      <image class="liLeft" src="https://img01.sogoucdn.com/net/a/04/link?appid=100520040&url=https://img04.sogoucdn.com/app/a/100520093/11388287d0e56ad7-53b51a5be5b5a2db-0d4a965d46d4436ed1c7053eccb6fe70.jpg"></image>
+      <view class="liRig">
+        <view class="friend">我的好友1</view>
+        <view class="firText">可帮他收取50里程，获赠50里程</view>
+      </view>
+    </view>
+    <view  bindtap="Collection"  class="userRig {{bool?'bgRed':''}}">
+      <text>{{bool?'收集':'已收集'}}</text>
+    </view>
+  </view>
+  <view class="li clearfix">
+    <view class="userLeft clearfix">
+      <image class="liLeft" src="https://img01.sogoucdn.com/net/a/04/link?appid=100520040&url=https://img04.sogoucdn.com/app/a/100520093/11388287d0e56ad7-53b51a5be5b5a2db-0d4a965d46d4436ed1c7053eccb6fe70.jpg"></image>
+      <view class="liRig">
+        <view class="friend">我的好友1</view>
+        <view class="firText">可帮他收取50里程，获赠50里程</view>
+      </view>
+    </view>
+    <view class="userRig">
+      <text>收藏</text>
+    </view>
+  </view>
+  <view class="li clearfix">
+    <view class="userLeft clearfix">
+      <image class="liLeft" src="https://img01.sogoucdn.com/net/a/04/link?appid=100520040&url=https://img04.sogoucdn.com/app/a/100520093/11388287d0e56ad7-53b51a5be5b5a2db-0d4a965d46d4436ed1c7053eccb6fe70.jpg"></image>
+      <view class="liRig">
+        <view class="friend">我的好友1</view>
+        <view class="firText">可帮他收取50里程，获赠50里程</view>
+      </view>
+    </view>
+    <view bindtap="Collection" class="userRig">
+      <text>收藏</text>
+    </view>
+  </view>
+  <view class="li clearfix">
+    <view class="userLeft clearfix">
+      <image class="liLeft" src="https://img01.sogoucdn.com/net/a/04/link?appid=100520040&url=https://img04.sogoucdn.com/app/a/100520093/11388287d0e56ad7-53b51a5be5b5a2db-0d4a965d46d4436ed1c7053eccb6fe70.jpg"></image>
+      <view class="liRig">
+        <view class="friend">我的好友1</view>
+        <view class="firText">可帮他收取50里程，获赠50里程</view>
+      </view>
+    </view>
+    <view class="userRig">
+      <text>收藏</text>
+    </view>
+  </view>
+  <view class="li clearfix">
+    <view class="userLeft clearfix">
+      <image class="liLeft" src="https://img01.sogoucdn.com/net/a/04/link?appid=100520040&url=https://img04.sogoucdn.com/app/a/100520093/11388287d0e56ad7-53b51a5be5b5a2db-0d4a965d46d4436ed1c7053eccb6fe70.jpg"></image>
+      <view class="liRig">
+        <view class="friend">我的好友1</view>
+        <view class="firText">可帮他收取50里程，获赠50里程</view>
+      </view>
+    </view>
+    <view class="userRig">
+      <text>收藏</text>
+    </view>
+  </view>
+  <view class="li clearfix">
+    <view class="userLeft clearfix">
+      <image class="liLeft" src="https://img01.sogoucdn.com/net/a/04/link?appid=100520040&url=https://img04.sogoucdn.com/app/a/100520093/11388287d0e56ad7-53b51a5be5b5a2db-0d4a965d46d4436ed1c7053eccb6fe70.jpg"></image>
+      <view class="liRig">
+        <view class="friend">我的好友1</view>
+        <view class="firText">可帮他收取50里程，获赠50里程</view>
+      </view>
+    </view>
+    <view class="userRig">
+      收藏
+    </view>
+  </view>
+  <view class="li clearfix">
+    <view class="userLeft clearfix">
+      <image class="liLeft" src="https://img01.sogoucdn.com/net/a/04/link?appid=100520040&url=https://img04.sogoucdn.com/app/a/100520093/11388287d0e56ad7-53b51a5be5b5a2db-0d4a965d46d4436ed1c7053eccb6fe70.jpg"></image>
+      <view class="liRig">
+        <view class="friend">我的好友1</view>
+        <view class="firText">可帮他收取50里程，获赠50里程</view>
+      </view>
+    </view>
+    <view class="userRig">
+      <text>收藏</text>
+    </view>
+  </view>
+  <button type="warn">邀请更多好友，获得更多奖励</button>
+</view>

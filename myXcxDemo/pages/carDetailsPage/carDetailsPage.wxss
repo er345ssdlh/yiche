@@ -1,0 +1,41 @@
+/* pages/carDetailsPage/carDetailsPage.wxss */
+.img{
+  margin: 30rpx;
+  box-shadow: 1rpx 1rpx 10rpx rgba(1, 1, 1, 0.3);
+  border-radius: 40rpx;
+  overflow: hidden;
+}
+.img image{
+  width: 100%;
+}
+.textCar{
+  padding: 20rpx 50rpx 20rpx 50rpx;
+  font-size: 25rpx;
+}
+.textCar view{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.textCar view text:nth-child(1){
+  float: left;
+}
+.textCar view text:nth-child(2){
+  float: right;
+}
+.goLookLook{
+  display: block;
+  width: 120rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  text-align: center;
+  border-radius: 20rpx;
+  background-color: red;
+  color: #ffffff;
+}
+.big{
+float: left;
+}
+.green{
+  float: right !important;
+  color: green;
+}

@@ -1,0 +1,80 @@
+/* pages/help/help.wxss */
+.myHeader{
+  background: rgba(255,75,59,0.10);
+  width: 750rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 24rpx;
+  color:#FF4B3B;
+  letter-spacing: 0;
+  text-align: center;
+}
+.clearfix:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
+.myBody{
+  margin: 0 40rpx 40rpx 40rpx;
+}
+.bgRed{
+  background-color:#ee5946;
+  color: #ffffff !important;
+}
+.hOne{
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  font-family: PingFangSC-Medium;
+  font-size: 40rpx;
+  color: #222222;
+  letter-spacing: 0;
+  line-height: 40rpx;
+}
+.liLeft{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  float: left;
+}
+.liRig{
+  float: right;
+}
+.userLeft{
+  float: left;
+  width: 468rpx;
+}
+.friend{
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  color: #222222;
+}
+.firText{
+  font-family: PingFangSC-Light;
+  font-size: 12px;
+  color: #494949;
+}
+.userRig{
+  float: right;
+  width: 120rpx;
+  height: 56rpx;
+  margin-top: 40rpx;
+  line-height: 56rpx;
+  text-align: center;
+  border: 1px solid #FF4B3B;
+  border-radius: 32rpx;
+  font-size: 28rpx;
+  color: #FF4B3B
+}
+.li{
+  padding: 50rpx 0;
+  border-bottom: 2rpx solid #eee;
+}
+button{
+  width: 670rpx;
+  height: 88rpx;
+  border-radius: 40rpx;
+  background: #FF4B3B;
+}

@@ -1,0 +1,9 @@
+<!--pages/news/news.wxml-->
+<view class="tit">
+  <text>{{tit}}</text>
+  <image src="{{cover}}"></image>
+  <view class="usercon">
+    <text>{{user}}</text>
+    <text>{{time}}</text>
+  </view>
+</view>

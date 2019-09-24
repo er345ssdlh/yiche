@@ -1,0 +1,4 @@
+<!--pages/day/day.wxml-->
+<block wx:for='{{num}}' wx:key='item'>
+  <view class="s">{{item}}</view>
+</block>
